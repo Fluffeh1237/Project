@@ -1,0 +1,12 @@
+
+body {
+    margin: 0;
+}
+.box1 {
+    background-color: #ad1919;
+    height: 100vh;
+}
+.box2 {
+    background-color: #ddf2d1;
+    height: 100vh;
+}

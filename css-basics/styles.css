@@ -1,0 +1,71 @@
+* {
+    color:#40E0D0;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+}
+
+body {
+    background-color: #f2f2;
+}
+
+
+#title {
+    color: rgb(255, 0, 0);
+}
+.title{
+    color: rgb(255, 192, 2023);
+}
+h1{
+    color: rgba(20, 20, 145, 0.5);
+}
+
+/* tag specificity -->(0,0,0,1)
+   class/attribute specificity -->(0,0,1,0)
+   id specificity --> (0,1,0,0)
+   inline specificity --> (1,0,0,0)
+   * specificity    -->(0,0,0,0) */
+
+.container p{
+    font-size: 16px;
+}
+
+p.container-title{
+    font-size: 20px;
+}
+
+#section1 .container .container-title {
+    font-size:24 px;
+}
+[data-role='title3'] {
+    font-size: 30px;
+}
+/* descendent selector --> does not keep count of hierarchy*/
+ul li{
+    color: green;
+}
+/* direct child selector */
+ul > li.item2 {
+    color: orange;
+}
+li > p.subtitle {
+    color: #A020F0;
+}
+.font-container p {
+    color:#9b0490;
+    font-size: 1rem;
+}
+.font-container-2 {
+    font-size: 25px;
+
+    > p {
+        font-size: 1em;
+        font-weight: 400;
+     }
+     div {
+        background-color: #222;
+        color: #fff;
+     }
+}
