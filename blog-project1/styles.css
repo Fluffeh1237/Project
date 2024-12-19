@@ -1,0 +1,136 @@
+:root {
+    --line-height: 1.5rem;
+    --color-primary: #d6001c;
+    --color-secondary: #6E1578;
+    --text-color-secondary: #2a2e3a;
+    --bg-color-primary: #fff;
+    --bg-color-secondary: #F5F6F8;
+    --content-spacing: 1rem 20rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: var(--line-height);
+    background-color: var(--bg-color-primary);
+}
+
+.header {
+    padding: var(--content-spacing);
+    display: flex;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+}
+
+.header-menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    .icon {
+        font-size: 0.875rem;
+        flex: 1;
+        text-align: end;
+        i {
+            cursor: pointer;
+        }
+    }
+}
+
+.header-menu > p {
+    color:var(--text-color-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header-menu >p:hover {
+    color: var(--color-primary);
+}
+
+.content {
+    background-color: var(--bg-color-secondary);
+    padding: var(--content-spacing);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+    'side-menu main';
+    column-gap: 1.25rem;
+}
+
+.side-menu{
+    grid-area:side-menu;
+}
+
+.side-menu-content {
+    position: sticky;
+    top: 10rem;
+}
+
+.main{
+    grid-area:main;
+}
+
+.button {
+    border-radius: 0.25rem;
+    color: var(--color-primary);
+    background-color: var(--bg-color-primary);
+    font-family: inherit;
+    font-weight: 600;
+    border: 1px solid var(--color-primary);
+    padding: 9px 32px;     
+}
+
+.button:hover{
+    background-color: var(--color-primary);
+    color:var(--bg-color-primary);
+    cursor: pointer;
+}
+
+.title {
+    height: 280px;
+    background-color: var(--bg-color-secondary);
+    padding: 1rem 0 1rem 20rem;
+}
+
+h1{
+    margin-top: 4rem;
+    margin-bottom: 0;
+    font-size: 3rem;
+    line-height: normal;
+    width: fit-content;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        to right,
+        var(--color-secondary),
+        var(--color-primary)
+        );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle-content{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+}
